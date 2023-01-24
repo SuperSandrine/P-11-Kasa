@@ -1,0 +1,22 @@
+@import "../settings";
+
+.card{
+  width: 340px;
+  height: 340px;
+  background-color: $main-color;
+  border-radius: 10px;
+  .masque-card{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 10px;
+    height: 340px;
+    width: 340px;
+    display: flex;
+    align-items: flex-end;
+    h3{
+      color: white;
+      padding: 20px 50% 20px 20px;
+      @include typoFive00Eigthee;
+      line-height: 142.6%;
+    }
+  }
+}

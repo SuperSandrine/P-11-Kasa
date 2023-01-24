@@ -1,0 +1,13 @@
+@import "../settings";
+
+.cards{
+  margin: 43px 0;
+  background-color: $background-color;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  justify-content: space-between;
+  row-gap: 50px;
+  column-gap: 3vmin;
+}

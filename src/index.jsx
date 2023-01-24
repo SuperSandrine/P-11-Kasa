@@ -1,16 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter,Routes, Route } from 'react-router-dom'
+import CreateRouter from './CreateRouter';
+import "./styles/index.scss"
 
-//import Layout from './Layout';
-import Home from './pages/Home'
-import About from './pages/About'
-import HousingDetails from './pages/HousingDetails'
-import Error from './pages/Error'
-
-import Header from './components/Header'
-import App from './App'
 
 const container = document.getElementById('root')
 const root = createRoot(container);
@@ -33,20 +25,7 @@ const root = createRoot(container);
 
 
 root.render(
-  <div>
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/home' element={<Home/>} />
-      <Route path='/about' element={<About />} />
-      <Route path='/error' element={<Error />} />
-      <Route path='/housingDetails/:id' element={<HousingDetails />} />
-      {/* path='/*' renvoie la page Error si jamais l'url ne correspond à rien déclaré ci-dessus 
-      TODO = Normalement on envoit à la page d'accueil, vérifier ce qui est mieux*/}
-      <Route path='*' element={<Error />} />
-    </Routes>
-    </BrowserRouter>
-  </div>
+    <CreateRouter/>
 );
 
 //export default RouterIAm;

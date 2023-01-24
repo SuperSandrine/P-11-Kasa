@@ -1,0 +1,28 @@
+@import "../settings";
+
+.slogan {
+  color: white;
+  @include typoFiveOOFourEight;
+  position: absolute;
+  z-index: 5;
+  left: calc((100% - 704px)/2) ;
+  top: calc((100% - 55px)/2);
+  margin:0;
+}
+
+.banner {
+  position: relative;
+  // remplir background url dynamiquement
+  background: url(../../assets/falaiseGrand.jpg); 
+  border-radius:25px;
+  z-index: 3;
+
+  .masque{
+    z-index: 4;
+    display: flex;
+    Height:223px;
+    Opacity:30%;
+    background-color: black; 
+    border-radius:25px;
+  }
+}

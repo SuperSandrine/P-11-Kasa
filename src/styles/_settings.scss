@@ -1,0 +1,40 @@
+// réglage généraux
+//police
+//variable
+//mixin
+// réglages généraux du projet
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+$main-color: #FF6060;
+$background-color: #F6F6F6;
+
+@mixin typoFiveOOTwoFour() {
+  font-weight: 500;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin typoFiveOOFourEight{
+  font-weight: 500;
+  font-size: 48px;
+}
+
+@mixin typoFive00Eigthee{
+  font-weight: 500;
+  font-size: 18px;
+}
+
+body{
+  padding: 0 100px;
+}
+
+li {
+  list-style-type: none;
+}
+

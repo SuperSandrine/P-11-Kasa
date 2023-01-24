@@ -1,5 +1,7 @@
 import Navigation from "../Navigation";
 
+import logo from "../../assets/LOGO.svg"
+
 // function NavList() {
 //   // This styling will be applied to a <NavLink> when the
 //   // route that it links to is currently selected.
@@ -39,16 +41,16 @@ import Navigation from "../Navigation";
 
 function Logo(){
   return(
-  <img src="https://picsum.photos/200/300" alt="random photographie"/>
+  <img src={logo} alt="logo de Kasa"/>
   )
 }
 
 function Header(){
   return(
-  <div>
+  <header >
     <Logo/>
     <Navigation/>
-  </div>
+  </header >
   )
 }
 

@@ -1,12 +1,21 @@
 import React from 'react';
+import Banner from '../../components/Banner';
+import Card from '../../components/Card';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <Header />
-      <h1>Titre accueil</h1>
-    </div>
+      <Banner titre="Chez vous, partout et ailleurs " />
+      <section className='cards'>
+        <Card titre="Titre de la location"/>
+        <Card titre="Titre de la location"/>
+        <Card titre="Titre de la location"/>
+      </section>
+      <Footer />
+    </main>
   );
 };
 

@@ -1,11 +1,13 @@
 import React from 'react';
+import logoOfFooter from "../../assets/LOGO-footer.svg"
+
 
 const Footer = () => {
   return (
-    <div>
-      <h2>Le footer est en cours de création
-      </h2>
-    </div>
+    <footer>
+      <img src={logoOfFooter}alt='logo de Kasa' />
+      <p>© 2020 Kasa. All rights reserved</p>
+    </footer>
   );
 };
 

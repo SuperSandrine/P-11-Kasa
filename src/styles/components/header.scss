@@ -1,0 +1,36 @@
+@import "../settings";
+
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0;
+  align-items: center;
+}
+
+.navigation{
+  ul{
+    display: flex;
+    flex-direction: row;
+    a{
+      text-decoration: none;
+      @include typoFiveOOTwoFour;
+      li{
+        color: $main-color;
+        cursor: pointer;
+        padding-left: 40px;
+        &:hover{
+          color:grey;
+        }
+      }
+    }
+  }
+}
+
+.nav-active{
+  li{
+    text-decoration-line: underline;
+  }
+}
