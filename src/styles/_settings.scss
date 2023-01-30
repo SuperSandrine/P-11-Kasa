@@ -9,6 +9,7 @@
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 $main-color: #FF6060;
@@ -18,6 +19,13 @@ $background-color: #F6F6F6;
   font-weight: 500;
   font-size: 24px;
   font-family: 'Montserrat', sans-serif;
+}
+
+@mixin typoFourOOTwoFour() {
+  font-weight: 400;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 142.6%;
 }
 
 @mixin typoFiveOOFourEight{

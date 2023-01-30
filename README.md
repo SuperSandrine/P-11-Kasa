@@ -79,5 +79,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### writing convention
 
-component
-Component/ComponentName/index.jsx
+création de component, en PascalCase
+components/ComponentName/ComponentName.jsx
+
+### travail de eslint et prettier ensemble
+installation de eslint et prettier: tuto suivi: https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b 
+lien source et support pour gérer les conflits:
+https://github.com/prettier/eslint-config-prettier
+https://github.com/prettier/eslint-plugin-prettier
+
+
+
+

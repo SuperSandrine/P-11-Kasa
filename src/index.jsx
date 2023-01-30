@@ -1,6 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import CreateRouter from './CreateRouter';
+import Router from './pages/Router.jsx';
 import "./styles/index.scss"
 
 
@@ -25,7 +25,7 @@ const root = createRoot(container);
 
 
 root.render(
-    <CreateRouter/>
+    <Router/>
 );
 
 //export default RouterIAm;
