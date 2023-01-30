@@ -1,0 +1,30 @@
+@use "./../../styles/_settings.scss" as s;
+
+.sectionError{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: s.$main-color;
+  min-height: 70vh;
+  
+//  margin: 0px;
+  h1 {
+    font-weight: 700;
+    font-size: 288px;
+    margin: 0px;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 36px;
+
+  }
+  a{
+    color: s.$main-color;
+    @include typoFive00Eigthee;
+    display: flex;
+
+    align-items: flex-end;
+    flex-grow: 2;
+  }
+}
