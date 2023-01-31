@@ -14,9 +14,10 @@ function Router() {
         <Route path='/home' element={<Home/>} />
         <Route path='/about' element={<About />} />
         <Route path='/error' element={<Error />} />
-        <Route path='/housingDetails/:id' element={<HousingDetails />} />
+        <Route path='/housingDetails/:houseId' element={<HousingDetails />} />
         {/* path='/*' renvoie la page Error si jamais l'url ne correspond à rien déclaré ci-dessus 
         TODO = Normalement on envoit à la page d'accueil, vérifier ce qui est mieux*/}
+        <Route path='/housingDetails/*' element={<Error />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

@@ -52,7 +52,10 @@
         // ],
         // TODO: prop-types règle à changer quand code en place
         
-            "react/prop-types": "off"
-          
+        "react/prop-types": "off",
+        "react/jsx-uses-vars": "off",
+        "react/jsx-uses-react": "off",
+        "no-unused-vars":"off"
+            
     }
 }

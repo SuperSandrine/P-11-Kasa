@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import mountainBgImg from '../../assets/mountainGrand.jpg'
 import Collapse from '../../components/Collapse/Collapse';
 import Footer from '../../components/Footer/Footer';
+import Slideshow from '../../components/Slideshow/Slideshow';
 
 
 
@@ -23,6 +24,7 @@ const About = () => {
   return (
     <main>
       <Header />
+      <Slideshow />
       <Banner fond={mountainBgImg}/>
       <section style={styleSection}>
         <Collapse title="Fiabilité" content={fiabContent}/>
