@@ -19,6 +19,8 @@ function Router() {
         TODO = Normalement on envoit à la page d'accueil, vérifier ce qui est mieux*/}
         <Route path='/housingDetails/*' element={<Error />} />
         <Route path='*' element={<Error />} />
+        
+
       </Routes>
     </BrowserRouter>
   );

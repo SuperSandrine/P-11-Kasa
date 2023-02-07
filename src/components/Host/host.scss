@@ -1,0 +1,17 @@
+.host-box{
+  display: flex;
+  align-items: center;
+  gap:10px;
+  .host-name{
+    display: flex;
+    @include typoFive00Eigthee;
+    line-height: 142.6%;
+    align-items: flex-end;
+    text-align: right;
+    max-width: 100px;
+  }
+  .host-portrait{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}}

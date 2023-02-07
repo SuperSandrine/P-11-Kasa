@@ -6,9 +6,7 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended",
-        "prettier"
+        "plugin:react/recommended"
     ],
     "overrides": [
     ],
@@ -17,45 +15,12 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "prettier"
+        "react"
     ],
     "rules": {
-        "prettier/prettier": "off",
         "react/react-in-jsx-scope": "off",
-        "indent":"off",
-        "curly": ["error", "all"],
-        "lines-around-comment": [
-            "off",
-            {
-              "beforeBlockComment": true,
-              "afterBlockComment": true,
-              "beforeLineComment": true,
-              "afterLineComment": true,
-              "allowBlockStart": true,
-              "allowBlockEnd": true,
-              "allowObjectStart": true,
-              "allowObjectEnd": true,
-              "allowArrayStart": true,
-              "allowArrayEnd": true
-            }
-        ],
-//        "max-len": ["error", {"code": 80, "ignoreUrls": true}],
-//        "no-confusing-arrow": ["error", { "allowParens": false } ],
-//        "no-mixed-operators": "error",
-        "no-tabs": ["error", {"allowIndentationTabs": true}],
-//        "no-unexpected-multiline": "error",
-        // "quotes": [
-        //     "error",
-        //     "single",
-        //     { "avoidEscape": true, "allowTemplateLiterals": false }
-        // ],
-        // TODO: prop-types règle à changer quand code en place
-        
+        "indent":["error",2],
         "react/prop-types": "off",
-        "react/jsx-uses-vars": "off",
-        "react/jsx-uses-react": "off",
         "no-unused-vars":"off"
-            
     }
 }

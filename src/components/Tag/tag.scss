@@ -1,0 +1,17 @@
+.tags-box{
+  display: flex;
+  gap:10px;
+}
+
+.tag{
+  display:flex;
+  min-width:115px;
+  background-color: $main-color;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  font-size:14px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}

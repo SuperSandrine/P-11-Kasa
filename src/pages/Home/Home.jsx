@@ -4,12 +4,9 @@ import Card from '../../components/Card/Card';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header'
 
-import logements from '../../logements2.json'
-
 import cliffBgImg from '../../assets/falaiseGrand.jpg'
 //const cliffBgImg = "../../assets/falaiseGrand.jpg"
 //const cliffBgImg = "../../src/assets/falaiseGrand.jpg"
-
 
 // const Data = () => {
 //   console.log("log",logements)
@@ -75,7 +72,7 @@ const Home = () => {
       <Header />
       <Banner titre="Chez vous, partout et ailleurs " fond={cliffBgImg}/>
       {/* <Data /> */}
-      <Card titre="Titre de la location"/>
+      <Card />
       <Footer />
     </main>
   );

@@ -18,7 +18,7 @@ const Collapse = (props) => {
     //setCollapse((value) => value + 1 ) // compeur de clic
     setOpen(()=>!isOpen)
     rotation()
-    console.log("arrow", arrowToBeRotated.current.className)
+    //console.log("arrow", arrowToBeRotated.current.className)
     //arrowToBeRotated.current.classList.add('rotation')  
   }
 
@@ -31,21 +31,6 @@ const Collapse = (props) => {
       } 
     }
   }
-
-  // TOUN
-  // avec useEffect, est-ce possible de faire tourner la flèche?
-  // useEffect(()=>{
-  //   if (!isOpen){
-  //     arrowToBeRotated.current.classList.add('rotation')    
-  //   } else if(isOpen){
-  //     if (isOpen){
-  //       arrowToBeRotated.current.classList.remove('rotation')    
-  //     } 
-  //   }
-  // },[])
-
-
-
 
   return (
     <div className='collapse-box'>
@@ -60,8 +45,8 @@ const Collapse = (props) => {
       </button>
       
       { isOpen && <p className='collapse-content'>
-      {/* {props.children} */}
-      {content}
+        {/* {props.children} */}
+        {content}
       </p> }
     </div>
   );

@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 //  margin-bottom: 30px;
 //  z-index: 5;
 //  position: absolute;
@@ -39,7 +40,7 @@
   color: $main-color;
   border-radius: 5px;
   padding: 20px;
-  width: fit-content;
+  width: inherit;
 //  margin-top: -30px;
   //position: absolute;
   //top: -15px;

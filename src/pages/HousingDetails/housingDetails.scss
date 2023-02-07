@@ -1,0 +1,18 @@
+.iconography{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .rating-box{
+    display: flex;
+    column-gap: 10px;
+    width: 196px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.Presentation{
+  display: flex;
+  gap: 8%;
+}

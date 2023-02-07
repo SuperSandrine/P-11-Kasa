@@ -1,3 +1,4 @@
+
 .gallery-box{
   display: flex;
   //width: 100%;
@@ -12,8 +13,8 @@
     top: calc(50% - 33px);
     left: 5px;
     border: none;
-    transform: rotate(90deg);
-    width: 70px;
+    //transform: rotate(90deg);
+    //width: 70px;
     padding: 0;
     background-color: unset;
     img{    
@@ -28,8 +29,8 @@
     top: calc(50% - 33px);
     right: 5px;
     border: none;
-    transform: rotate(-90deg);
-    width: 70px;
+    transform: rotate(180deg);
+    //width: 70px;
     padding: 0;
     background-color: unset;
     img{    
@@ -37,19 +38,44 @@
       border-radius: 0;
     }
   }
-  // .arrowVertLeft{
-  //   border-radius: 0;
-  //   position: absolute;
-  //   top: calc(50% - 33px);
-  //   width: 70px;
-  //   right: 20px;
-  //   border: none;
-  //   background-color:red;
-  //   transform: rotate(-90deg);
-  // }
+  .pageNumber{
+    color:white;
+    width: 50px;
+    position: absolute;
+    top: 86.19%;
+    left: 48.95%;
+    @include typoFive00Eigthee;
+
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+  }
+
   img{
     width: 100%;
     object-fit:cover;
     border-radius: 25px;
   }
 }
+
+.heading{
+  display: flex;
+  justify-content: space-between;
+  color: $main-color;
+  margin: 30px 0 20px 0;
+  
+  h1{
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+    line-height: 142.6%;
+  }
+  h4{
+    @include typoFive00Eigthee;
+  }
+  .host{
+    display: flex;
+    align-items: center;
+  }
+}
+
