@@ -1,3 +1,5 @@
+
+
 .iconography{
   display: flex;
   justify-content: space-between;
@@ -10,9 +12,60 @@
     justify-content: center;
     align-items: center;
   }
+  @include small-only{
+    flex-direction: column;
+    row-gap: 10px;
+    .rating-box{
+      justify-content: flex-start;
+      img{
+        width: 15px;
+      }
+    }
+  }
 }
 
-.Presentation{
+.presentation{
   display: flex;
   gap: 8%;
+  @include small-only{
+    flex-direction: column;
+  }
 }
+
+.heading{
+  display: flex;
+  justify-content: space-between;
+  color: $main-color;
+  margin: 30px 0 20px 0;
+  @include small-only{
+    margin-bottom: 10px;
+  }
+  
+  h1{
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+    line-height: 142.6%;
+    @include small-only {
+      @include typoFive00Eigthee
+    }
+  }
+  h2{
+    @include typoFive00Eigthee;
+    @include small-only{
+      font-weight: 500;
+      font-size: 14px;
+    }
+  } 
+}
+
+// .host{
+//   display: flex;
+//   align-items: center;
+// }
+
+// #structure{
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+// }

@@ -30,28 +30,31 @@ const HousingDetails = () => {
 
   
     return (
-      <main>
+      <div id="structure">
         <Header />
-        <Slideshow urlPath={pictures}></Slideshow>
-        <div className='heading'>
-          <div>
-            <h1>{title}</h1>
-            <h4>{location}</h4>
+        <main>
+          <Slideshow urlPath={pictures}></Slideshow>
+          <div className='heading'>
+            <div>
+              <h1>{title}</h1>
+              <h2>{location}</h2>
+            </div>
+            <Host host={host}></Host>
           </div>
-          <Host host={host}></Host>
-        </div>
-        <div className='iconography'>
-          <Tag title={tags.map((element, index)=> <div className="tag" key={index} >{element}</div>)} />
-          {/* TODO doit y avoir un moyen de faire une truc plus simple comme ce codePen https://codepen.io/pen?&editors=0010&layout=left */}
+          <div className='iconography'>
+            <Tag title={tags.map((element, index)=> <div className="tag" key={index} >{element}</div>)} />
+            {/* TODO doit y avoir un moyen de faire une truc plus simple comme ce codePen https://codepen.io/pen?&editors=0010&layout=left */}
 
-          <div className='rating-box'> <Rating ratingdata={rating} /></div>
-        </div>
-        <section className='Presentation'>
-          <Collapse title="Description" content={description}/>
-          <Collapse className="tools" title="Équipements" content={equipmentsInLi}/>
-        </section>
+            <div className='rating-box'> <Rating ratingdata={rating} /></div>
+          </div>
+          <section className='presentation'>
+            <Collapse title="Description" content={description}/>
+            <Collapse className="tools" title="Équipements" content={equipmentsInLi}/>
+          </section>
+        </main>
         <Footer />
-      </main>
+
+      </div>
     );
 
 

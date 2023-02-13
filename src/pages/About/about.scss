@@ -1,0 +1,7 @@
+.collapsesBox {
+  margin: 43px;
+  margin-inline:auto;
+  width:90%;
+  @include small-only{
+    width: 100%;}
+}

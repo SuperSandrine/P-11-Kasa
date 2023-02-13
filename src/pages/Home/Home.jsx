@@ -68,13 +68,15 @@ import cliffBgImg from '../../assets/falaiseGrand.jpg'
 
 const Home = () => {
   return (
-    <main>
+    <div id="structure">
       <Header />
-      <Banner titre="Chez vous, partout et ailleurs " fond={cliffBgImg}/>
-      {/* <Data /> */}
-      <Card />
+      <main>
+        <Banner titre="Chez vous, partout et ailleurs " fond={cliffBgImg} id="homeBanner"/>
+        {/* <Data /> */}
+        <Card />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 };
 

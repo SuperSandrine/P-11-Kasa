@@ -1,14 +1,15 @@
 import React from 'react';
 
 const Banner = (props) => {
+  const classes = 'masque homeBanner'
   return (
     <div>
       
       <section role="banner" className='banner' style={{
-        backgroundImage: `url(${props.fond})`
+        backgroundImage: `url(${props.fond})`, backgroundPositionY: 'center'
       }}>
         <h1 className="slogan">{props.titre}</h1>
-        <div className="masque"></div>
+        <div className={classes} id={props.id}></div>
       </section>
       
     </div>

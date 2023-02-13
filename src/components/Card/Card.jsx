@@ -3,7 +3,7 @@
 import logements from '../../logements2.json'
 console.log("liste de propriétés", Object.entries(logements[0]))
 
-import HousingsData from '../HousingsData';
+import HousingsData from '../../data/HousingsData.jsx';
 
 const Card = () => {
   
@@ -25,7 +25,7 @@ const Card = () => {
             backgroundImage: `url(${logement.cover})`
           }} href={`/housingDetails/${logement.id}`}>
             <div className="masque-card" >
-              <h3>{logement.title} </h3>
+              <h2>{logement.title} </h2>
             </div> 
           </a>
         )

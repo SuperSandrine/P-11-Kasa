@@ -3,10 +3,7 @@ import React, { useState } from 'react';
 import arrowLeftImg from '../../assets/leftArrow.svg';
 
 
-
-
-
-// utilisation des props dans le parent, descendus aaux enfants, updater chez les enfants et remonter aux parents.
+// utilisation des props dans le parent, descendus aux enfants, updater chez les enfants et remonter aux parents.
 
 // const qui s'occupe de compter les photos
 // le numéro change à chaque fois que j'appuie sur un bouton suivant ou next et renvoit l'index/le lenght du tableau pictures
@@ -20,8 +17,6 @@ const PageNumber = (props) => {
 
 // const qui affiche l'image en fonction de l'index
 const Image = (props) => {  
-  //console.log("props dans image", props) // affiche toutes les props dans un objet
-  //console.log("dans image, indexOfPictures", props.indexOfPictures)
   return (    
     <img
       data-index={props.indexOfPictures}
@@ -31,37 +26,31 @@ const Image = (props) => {
   );  
 }
 
-// TODO limiter ces déplacements à la longueure du tableau
-// TODO quand j'arrive sur l'index final, alors la flcèhe disparaît,
-// TODO quand j'arrive sur le premier index, alors la flèche disparait
+
 const ButtonSlide =(props) =>{
-  //console.log("button props", props)
-  //console.log("button pictures", props.pictures)
   const handleClickImage = (e) => {
     e.preventDefault();
     const direction =  e.target.getAttribute('data-direction')
-    console.log("direction", direction)
     
     if (direction === 'next') {
-      //console.log("passer à la photo suivante")
-      props.updateIndexOfPictures(props.indexOfPictures +1)
-      console.log("next index", props.indexOfPictures + 1) // renvoit 0, l'index dans les props
-      console.log(props.pictures.length)
+      console.log("propsIndex A", props.indexOfPictures) // renvoit 0
+      props.updateIndexOfPictures(props.indexOfPictures + 1)
+      console.log("next index", props.indexOfPictures) // François: renvoit toujours 0, l'index dans les props, pourquoi?
 
-      if ((props.indexOfPictures+1) == (props.pictures.length - 1)){
-        console.log("la flèche fin doit disparaître")
-        props.updateIndexOfPictures( props.indexOfPictures = 0)
+      if ((props.indexOfPictures) >= (props.pictures.length-1)){
+        props.updateIndexOfPictures(0)
+        console.log("props après fin array", props.indexOfPictures)
       }
-      //TODO : ça marche pas
 
-
-    } else if (direction === 'previous'){
-      //console.log("passer à la photo précédente")
+    // } else if (direction === 'previous'){ // pas nécessaire
+    } else {
       props.updateIndexOfPictures(props.indexOfPictures -1)
-      if ((props.indexOfPictures) == 1){
-        console.log("la flèche début doit disparaître")
+      if ((props.indexOfPictures) < 1){
+        props.updateIndexOfPictures(props.pictures.length-1)
       }
     } 
+    console.log("next index 2", props.indexOfPictures) // renvoit 0, l'index dans les props
+
 
   }
   return(
@@ -73,21 +62,18 @@ const ButtonSlide =(props) =>{
 
 
 const Slideshow = (path) => {
-  //console.log("slideshow path", path) // {urlpath:array(5)}
-  //console.log("slideshow path.url", path.urlPath) // tableau des images
-  //console.log(path.urlPath.length) //5
-  
-
-  //mettre le state dans le parent
-  const [indexOfPictures, updateIndexOfPictures] = useState(0)
-  //console.log("indexOfpictures du state", indexOfPictures) // [0]
-  //console.log("slideshow path.url index0", path.urlPath[0]) // adresse https de l'image 0
-  
-
+  //mettre le state dans le parent, soit ici
+  const [indexOfPictures, updateIndexOfPictures] = useState(0)  
+  // TODO: nom de props plus court, IndexPictures, mise en page à la ligne
   return (
     <div className='gallery-box'>
       <ButtonSlide class='arrowVertLeft' dataDirection='previous' pictures={path.urlPath} updateIndexOfPictures={updateIndexOfPictures} indexOfPictures={indexOfPictures}/>
-      <ButtonSlide class='arrowVertRight' dataDirection='next' pictures={path.urlPath}updateIndexOfPictures={updateIndexOfPictures} indexOfPictures={indexOfPictures}/>
+      <ButtonSlide 
+        class='arrowVertRight' 
+        dataDirection='next' 
+        pictures={path.urlPath} 
+        updateIndexOfPictures={updateIndexOfPictures} 
+        indexOfPictures={indexOfPictures}/>
       <PageNumber class='pageNumber' pictures={path.urlPath} indexOfPictures={indexOfPictures}/>
       <Image pictures={path.urlPath} indexOfPictures={indexOfPictures}  />
     </div>

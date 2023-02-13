@@ -9,9 +9,18 @@
     align-items: flex-end;
     text-align: right;
     max-width: 100px;
+    @include small-only{
+      font-weight: 500;
+      font-size: 12px;
+    }
   }
   .host-portrait{
     width: 64px;
     height: 64px;
     border-radius: 50%;
-}}
+    @include small-only{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

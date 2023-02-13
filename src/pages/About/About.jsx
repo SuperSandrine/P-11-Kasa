@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import Header from '../../components/Header/Header';
 
@@ -13,26 +13,37 @@ const respContent="La bienveillance fait partie des valeurs fondatrices de Kasa.
 const servContent="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.";
 const secuContent="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.";
 
-const styleSection = {
-  margin: "43px",
-  marginInline:"auto",
-  width:"90%",
-}
+// const styleSection = {
+//   margin: "43px",
+//   marginInline:"auto",
+//   width:"90%",
+//   '@media (maxWidth: 1023px )': {
+//     width: "100%" ,
+//     backgroundColor: 'blue',
+//   },
+// }
+
+
 
 const About = () => {
   return (
-    <main>
+    <div >
       <Header />
-      
-      <Banner fond={mountainBgImg}/>
-      <section style={styleSection}>
-        <Collapse title="Fiabilité" content={fiabContent}/>
-        <Collapse title="Respect" content={respContent}/>
-        <Collapse title="Service" content={servContent}/>
-        <Collapse title="Sécurité" content={secuContent}/>
-      </section>
-      <Footer />
-    </main>
+      <div id="structure">
+        <main>
+          <Banner fond={mountainBgImg} />
+          {/* <section style={styleSection}> */}
+          <section className='collapsesBox'>
+            <Collapse title="Fiabilité" content={fiabContent}/>
+            <Collapse title="Respect" content={respContent}/>
+            <Collapse title="Service" content={servContent}/>
+            <Collapse title="Sécurité" content={secuContent}/>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </div>
+
   );
 };
 

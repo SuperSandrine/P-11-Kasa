@@ -1,11 +1,16 @@
 
 .card{
+  text-decoration: unset;
   width: 340px;
   height: 340px;
   background-color: $main-color;
   background-size: cover;
   border-radius: 10px;
   cursor: pointer;
+  @include small-only{
+    height: 255px;
+    width: 100%;
+  }
   .masque-card{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 10px;
@@ -13,7 +18,11 @@
     width: 340px;
     display: flex;
     align-items: flex-end;
-    h3{
+    @include small-only{
+      height: 255px;
+      width: 100%;
+    }
+    h2{
       color: white;
       padding: 20px 30% 20px 20px;
       @include typoFive00Eigthee;

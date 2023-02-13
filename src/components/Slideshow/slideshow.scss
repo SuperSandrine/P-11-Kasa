@@ -6,6 +6,10 @@
   background-color: pink;
   border-radius: 25px;
   position: relative;
+  @include small-only{
+    border-radius: 10px;
+    height: 244px;
+  }
   .arrowVertLeft{
     cursor: pointer;
     border-radius: 0;
@@ -17,9 +21,16 @@
     //width: 70px;
     padding: 0;
     background-color: unset;
+    @include small-only{
+      top: calc(50% - 20px/2);
+    }
     img{    
       //background-color:blue;
       border-radius: 0;
+      @include small-only{
+        height: 20px;
+      }
+      
     }
   }
   .arrowVertRight{
@@ -33,9 +44,15 @@
     //width: 70px;
     padding: 0;
     background-color: unset;
+    @include small-only{
+      top: calc(50% - 20px/2);
+    }
     img{    
       //background-color:blue;
       border-radius: 0;
+      @include small-only{
+        height: 20px;
+      }
     }
   }
   .pageNumber{
@@ -49,33 +66,19 @@
     display: flex;
     align-items: flex-end;
     text-align: center;
+    @include small-only{
+      visibility: hidden;
+    }
   }
 
   img{
     width: 100%;
     object-fit:cover;
     border-radius: 25px;
+    @include small-only {
+      border-radius: 10px;
+    }
   }
 }
 
-.heading{
-  display: flex;
-  justify-content: space-between;
-  color: $main-color;
-  margin: 30px 0 20px 0;
-  
-  h1{
-    font-weight: 500;
-    font-size: 36px;
-    margin: 0;
-    line-height: 142.6%;
-  }
-  h4{
-    @include typoFive00Eigthee;
-  }
-  .host{
-    display: flex;
-    align-items: center;
-  }
-}
 

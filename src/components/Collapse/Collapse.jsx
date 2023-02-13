@@ -35,10 +35,10 @@ const Collapse = (props) => {
   return (
     <div className='collapse-box'>
       <button className='collapse-barre' onClick={handleClick}>
-        <h2>
+        <h4>
           {title} 
           {/* open:{value} //compteur de clic */}
-        </h2>
+        </h4>
         {/* { isOpen && arrowToBeRotated.current.classList.add('rotation')} //ajoute la className mais ne l'enlève pas*/}
         
         <img className='arrow' src={arrowImg} alt="petite flèche" ref={arrowToBeRotated}></img>

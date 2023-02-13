@@ -15,6 +15,9 @@
 
 $main-color: #FF6060;
 $background-color: #F6F6F6;
+$small-width: 480px;
+$medium-width: 768px;
+$large-width: 1024px;
 
 @mixin typoFiveOOTwoFour() {
   font-weight: 500;
@@ -39,11 +42,32 @@ $background-color: #F6F6F6;
   font-size: 18px;
 }
 
-body{
-  padding: 0 100px;
+@mixin large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin small-only {
+  @media (min-width: #{$small-width - 150px}) and (max-width: #{$large-width - 1px}) {
+    @content;
+  }
+}
+
+main, header{
+  margin: 0 100px;
+  @include small-only{
+    margin: 0 20px;
+  }
 }
 
 li {
   list-style-type: none;
 }
 
+#structure{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

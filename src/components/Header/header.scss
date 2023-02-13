@@ -5,19 +5,39 @@ header {
   justify-content: space-between;
   padding: 40px 0;
   align-items: center;
+
+  @include small-only {
+    padding: 20px 0;
+    img{
+      width: 145px;
+    }
+  }
 }
+
 
 .navigation{
   ul{
     display: flex;
     flex-direction: row;
+    padding-inline-start: unset;
     a{
       text-decoration: none;
       @include typoFiveOOTwoFour;
+      @include small-only {
+        font-weight: 500;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      
       li{
         color: $main-color;
         cursor: pointer;
         padding-left: 40px;
+        @include small-only{
+          padding-left: 15px;
+        }
+        
+  
         &:hover{
           color:grey;
         }
