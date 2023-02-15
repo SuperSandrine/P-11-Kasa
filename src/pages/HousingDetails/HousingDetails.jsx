@@ -18,7 +18,9 @@ const HousingDetails = () => {
 
   const houseDatasFromParamsId = housingsData.filter(element => element.id.includes(Object.values(houseId)));
 
-  //console.log("houseDatasFromParamsId", houseDatasFromParamsId); // [{...}] // TODO : est dans un index 0, comment le virer et corriger le code suivant
+  //console.log("liste de propriétés", Object.entries(houseDatasFromParamsId))
+
+  console.log("houseDatasFromParamsId", houseDatasFromParamsId); // [{...}] // TODO : est dans un index 0, comment le virer et corriger le code suivant
 
 
   if (houseDatasFromParamsId[0] === undefined || houseDatasFromParamsId[0] === null){
@@ -30,29 +32,36 @@ const HousingDetails = () => {
 
   
     return (
-      <div id="structure">
+      <div>
+        
         <Header />
-        <main>
-          <Slideshow urlPath={pictures}></Slideshow>
-          <div className='heading'>
-            <div>
-              <h1>{title}</h1>
-              <h2>{location}</h2>
-            </div>
-            <Host host={host}></Host>
-          </div>
-          <div className='iconography'>
-            <Tag title={tags.map((element, index)=> <div className="tag" key={index} >{element}</div>)} />
-            {/* TODO doit y avoir un moyen de faire une truc plus simple comme ce codePen https://codepen.io/pen?&editors=0010&layout=left */}
+        <div id="structure">
+          <main>
+            <Slideshow urlPath={pictures}></Slideshow>
 
-            <div className='rating-box'> <Rating ratingdata={rating} /></div>
-          </div>
-          <section className='presentation'>
-            <Collapse title="Description" content={description}/>
-            <Collapse className="tools" title="Équipements" content={equipmentsInLi}/>
-          </section>
-        </main>
-        <Footer />
+
+            <div className='criteria'>
+              <div className='place'>
+                <h1>{title}</h1>
+                <h2>{location}</h2>
+                <Tag title={tags.map((element, index)=> <div className="tag" key={index} >{element}</div>)} />
+              </div>
+              
+              <div className='iconography'>
+                <Host host={host}></Host>
+                <div className='rating-box'> <Rating ratingdata={rating} /></div>
+              </div>
+            </div>
+
+
+
+            <section className='presentation'>
+              <Collapse title="Description" content={description}/>
+              <Collapse className="tools" title="Équipements" content={equipmentsInLi}/>
+            </section>
+          </main>
+          <Footer />
+        </div>
 
       </div>
     );

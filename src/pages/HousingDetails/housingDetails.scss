@@ -1,20 +1,60 @@
 
+.criteria{
+  color: $main-color;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  .place{
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    //margin: 30px 0 20px 0;
+    h1{
+      font-weight: 500;
+      font-size: 36px;
+      margin: 0;
+    }
+    h2{
+      @include typoFive00Eigthee;
+      padding: 5px 0 20px 0;
+    } 
+  }
+
+  @include small-only{
+    flex-direction: column;
+    .place{
+    
+    h1{
+      @include typoFive00Eigthee
+    }
+    h2 {
+        font-weight: 500;
+        font-size: 14px;
+        padding: 5px 0 10px 0;
+    }
+  }
+}
+}
 
 .iconography{
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  //margin-bottom: 20px;
 
   .rating-box{
     display: flex;
     column-gap: 10px;
     width: 196px;
-    justify-content: center;
-    align-items: center;
+    //justify-content: center;
+    //align-items: center;
   }
   @include small-only{
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
     row-gap: 10px;
+    padding: 10px 0 0 0;
     .rating-box{
       justify-content: flex-start;
       img{
@@ -31,41 +71,3 @@
     flex-direction: column;
   }
 }
-
-.heading{
-  display: flex;
-  justify-content: space-between;
-  color: $main-color;
-  margin: 30px 0 20px 0;
-  @include small-only{
-    margin-bottom: 10px;
-  }
-  
-  h1{
-    font-weight: 500;
-    font-size: 36px;
-    margin: 0;
-    line-height: 142.6%;
-    @include small-only {
-      @include typoFive00Eigthee
-    }
-  }
-  h2{
-    @include typoFive00Eigthee;
-    @include small-only{
-      font-weight: 500;
-      font-size: 14px;
-    }
-  } 
-}
-
-// .host{
-//   display: flex;
-//   align-items: center;
-// }
-
-// #structure{
-//   height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-// }

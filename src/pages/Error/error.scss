@@ -24,8 +24,22 @@
     color: s.$main-color;
     @include typoFive00Eigthee;
     display: flex;
-
     align-items: flex-end;
     flex-grow: 2;
   }
+  @include small-only{
+    justify-content: space-evenly;
+
+    h1{
+    font-size: 96px;
+    }
+    h2{
+    font-size: 18px;  
+    }
+    a{
+      font-size: 14px;
+      flex-grow: unset;
+    }
+
+}
 }

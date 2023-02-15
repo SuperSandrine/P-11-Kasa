@@ -1,8 +1,6 @@
 //import React from 'react';
 
 import logements from '../../logements2.json'
-console.log("liste de propriétés", Object.entries(logements[0]))
-
 import HousingsData from '../../data/HousingsData.jsx';
 
 const Card = () => {

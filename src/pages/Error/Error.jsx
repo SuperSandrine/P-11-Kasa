@@ -10,9 +10,10 @@ const Error = () => {
       <Header/>
       <main>
         <section className='sectionError'>
-      
-          <h1 className='headingError'>404</h1>
-          <h2>Oups! La page que vous demandez n&apos;existe pas.</h2>
+          <div>
+            <h1 className='headingError'>404</h1>
+            <h2>Oups! La page que vous demandez n&apos;existe pas.</h2>
+          </div>
           {/* <a href="/" className='nav-active'>Retourner sur la page d&apos;accueil</a> */}
           {/* TODO, TOUN: Est-ce que les navLink sont réservé au NavBar? */}
           <NavLink to='/' className='nav-active'>Retourner sur la page d&apos;accueil</NavLink>
