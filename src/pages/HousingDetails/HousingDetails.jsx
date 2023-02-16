@@ -33,7 +33,6 @@ const HousingDetails = () => {
   
     return (
       <div>
-        
         <Header />
         <div id="structure">
           <main>

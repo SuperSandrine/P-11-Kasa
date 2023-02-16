@@ -1,9 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { ReactDOM } from "react-dom";
-//TODO faire un fichier js avec un return
+//TODO faire un fichier js avec un return : OK
 //TODO get et callback dans la page home
 //TODO a passer de home et à desendre
+
+
 function HousingsData(){
   const [houses, setHouses] = useState([]);
 

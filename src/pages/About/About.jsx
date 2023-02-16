@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import Header from '../../components/Header/Header';
 
-import mountainBgImg from '../../assets/mountainGrand.jpg'
+import mountainBgImg from '../../assets/mountainGrand2.jpg'
 import Collapse from '../../components/Collapse/Collapse';
 import Footer from '../../components/Footer/Footer';
 
