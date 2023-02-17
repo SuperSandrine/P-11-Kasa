@@ -9,11 +9,16 @@
   justify-content: space-between;
   row-gap: 50px;
   column-gap: 3vmin;
-  @include small-only {
+  @include medium {
     border-radius: 10px;
+    row-gap: 35px;
+    margin: 23px 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  @include small-only{
     row-gap: 20px;
     padding: 0;
     background-color: unset;
-    margin: 23px 0;
   }
 }

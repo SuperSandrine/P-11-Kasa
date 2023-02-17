@@ -6,7 +6,7 @@ import Header from '../../components/Header/Header';
 
 const Error = () => {
   return (
-    <div id="structure">
+    <div>
       <Header/>
       <main>
         <section className='sectionError'>

@@ -1,5 +1,6 @@
 
 .card{
+  display: flex;
   text-decoration: unset;
   width: 340px;
   height: 340px;
@@ -7,9 +8,13 @@
   background-size: cover;
   border-radius: 10px;
   cursor: pointer;
+  @include medium{
+    height: 300px;
+    width: 100%;
+  }
   @include small-only{
     height: 255px;
-    width: 100%;
+    //width: 100%;
   }
   .masque-card{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
@@ -18,9 +23,12 @@
     width: 340px;
     display: flex;
     align-items: flex-end;
+    @include medium{
+      height: 300px;
+      width: 100%;
+    }
     @include small-only{
       height: 255px;
-      width: 100%;
     }
     h2{
       color: white;

@@ -43,7 +43,7 @@ export const getData= async ()=>{
   return housingsDatas
 }
 
-console.log("test getData", getData())// promise avec un array (sinon j'ai un objet quand je mets housingsDatas entre crochet)
+//console.log("test getData", getData())// promise avec un array (sinon j'ai un objet quand je mets housingsDatas entre crochet)
 
 
 

@@ -6,29 +6,7 @@ import Header from '../../components/Header/Header'
 import {Data, getData} from '../../data/housingsData.js'
 
 import cliffBgImg from '../../assets/falaiseGrand2.jpg'
-//const cliffBgImg = "../../assets/falaiseGrand.jpg"
-//const cliffBgImg = "../../src/assets/falaiseGrand.jpg"
 
-// const Data = () => {
-//   console.log("log",logements)
-//   return (
-//     <div>
-//       {
-       
-//         logements.map( logements =>{
-//           return(
-//             <div key={logements.id}>
-//               {logements.title}
-//             </div>
-//           )
-
-//         }
-//         )
-
-//       }
-//     </div>
-//   );
-// };
 
 
 // ça marche vvvvvvv
@@ -68,6 +46,7 @@ import cliffBgImg from '../../assets/falaiseGrand2.jpg'
 
 
 const Home = () => {
+  
   return (
     <div>
       <Header />

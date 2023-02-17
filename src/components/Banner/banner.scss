@@ -1,16 +1,26 @@
 
 .slogan {
   color: white;
-  @include typoFiveOOFourEight;
+  font-size: 48px;
+  font-weight: 400;
   position: absolute;
   z-index: 5;
   left: calc((100% - 704px)/2) ;
   top: calc((100% - 55px)/2);
   margin:0;
+  @include medium {
+    font-size: 36px;
+    font-weight: 400;
+    left: 9.6%;
+    right: 9.6%;
+    display: flex;
+    align-items: flex-end;
+  }
+  @media (max-width: 843px) {
+    top: calc((100% - 102px)/2); // on soustrait la hauteur de slogan box.
+  }
   @include small-only {
     @include typoFiveOOTwoFour;
-    left: 9.6%;
-    right: 32.53%;
     top: calc((100% - 60px)/2);
     display: flex;
     align-items: flex-end;
@@ -19,7 +29,7 @@
 
 .banner {
   position: relative;
-  border-radius:10px;
+  border-radius:25px;
   z-index: 3;
   .masque{
     z-index: 4;
@@ -28,11 +38,21 @@
     Opacity:30%;
     background-color: black; 
     border-radius:25px;
-    @include small-only{
+  }
+  @include medium{
+    border-radius:10px;
+    .masque {
+      border-radius:10px;
+    }
+  }
+  @include small-only{
+    border-radius:10px;
+    .masque {
       border-radius:10px;
     }
   }
 }
+
 
 #homeBanner {
   @include small-only{

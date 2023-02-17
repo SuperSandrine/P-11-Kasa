@@ -6,6 +6,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
+
+body {
+  @media ( min-width: 1400px){
+    width: 1400px;
+    margin-inline: auto;    
+  }
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0px;
@@ -48,8 +56,25 @@ $large-width: 1024px;
   }
 }
 
+// @mixin medium {
+//   @media (min-width: #{$medium-width}) and (max-width: #{$large-width - 1px}) {
+//     @content;
+//   }
+// }
+@mixin medium {
+  @media (max-width: #{$large-width - 1px}) {
+    @content;
+  }
+}
+
+// @mixin small-only {
+//   @media (min-width: 300px) and (max-width: #{$medium-width - 1px}) {
+//     @content;
+//   }
+// }
+
 @mixin small-only {
-  @media (min-width: #{315px}) and (max-width: #{$large-width - 1px}) {
+  @media (max-width: #{$medium-width - 1px}) {
     @content;
   }
 }
@@ -70,6 +95,9 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include medium{
+    height:calc(100vh - 136px)
+  }
   @include small-only{
     height: calc( 100vh - 87px);
   }

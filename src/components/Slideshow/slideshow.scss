@@ -15,7 +15,7 @@
     border-radius: 0;
     position: absolute;
     top: calc(50% - 33px);
-    left: 5px;
+    left: 24px;
     border: none;
     //transform: rotate(90deg);
     //width: 70px;
@@ -23,6 +23,7 @@
     background-color: unset;
     @include small-only{
       top: calc(50% - 20px/2);
+      left:5px;
     }
     img{    
       //background-color:blue;
@@ -38,7 +39,7 @@
     border-radius: 0;
     position: absolute;
     top: calc(50% - 33px);
-    right: 5px;
+    right: 24px;
     border: none;
     transform: rotate(180deg);
     //width: 70px;
@@ -46,6 +47,8 @@
     background-color: unset;
     @include small-only{
       top: calc(50% - 20px/2);
+      right: 5px;
+
     }
     img{    
       //background-color:blue;

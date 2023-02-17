@@ -33,24 +33,19 @@ const ButtonSlide =(props) =>{
     const direction =  e.target.getAttribute('data-direction')
     
     if (direction === 'next') {
-      console.log("propsIndex A", props.indexOfPictures) // renvoit 0
       props.updateIndexOfPictures(props.indexOfPictures + 1)
-      console.log("next index", props.indexOfPictures) // François: renvoit toujours 0, l'index dans les props, pourquoi?
+      
 
       if ((props.indexOfPictures) >= (props.pictures.length-1)){
         props.updateIndexOfPictures(0)
-        console.log("props après fin array", props.indexOfPictures)
       }
 
-    // } else if (direction === 'previous'){ // pas nécessaire
     } else {
       props.updateIndexOfPictures(props.indexOfPictures -1)
       if ((props.indexOfPictures) < 1){
         props.updateIndexOfPictures(props.pictures.length-1)
       }
     } 
-    console.log("next index 2", props.indexOfPictures) // renvoit 0, l'index dans les props
-
 
   }
   return(

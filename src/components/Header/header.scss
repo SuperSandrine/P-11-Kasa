@@ -5,12 +5,26 @@ header {
   justify-content: space-between;
   padding: 40px 0;
   align-items: center;
+  img{
+    width: 210px;
+  }
 
+  @include medium {
+    img{
+      width: 175px;
+    }
+  }
   @include small-only {
     padding: 20px 0;
     img{
-      width: 145px;
+      width: 135px;
     }
+  }
+  @media(max-width:325px) {
+    img{
+      width: 75px;
+    }
+    
   }
 }
 
@@ -20,6 +34,7 @@ header {
     display: flex;
     flex-direction: row;
     padding-inline-start: unset;
+    align-items: center;
     a{
       text-decoration: none;
       @include typoFiveOOTwoFour;
@@ -36,8 +51,6 @@ header {
         @include small-only{
           padding-left: 15px;
         }
-        
-  
         &:hover{
           color:grey;
         }

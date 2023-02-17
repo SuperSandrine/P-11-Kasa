@@ -10,25 +10,26 @@
     //justify-content: space-between;
     //margin: 30px 0 20px 0;
     h1{
-      font-weight: 500;
+      font-weight: 400;
       font-size: 36px;
       margin: 0;
     }
     h2{
-      @include typoFive00Eigthee;
-      padding: 5px 0 20px 0;
+      font-weight: 400;
+      font-size: 18px;
+      padding: 0px 0 20px 0;
     } 
   }
 
   @include small-only{
     flex-direction: column;
     .place{
-    
     h1{
-      @include typoFive00Eigthee
+      font-weight: 400;
+      font-size: 18px;
     }
     h2 {
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         padding: 5px 0 10px 0;
     }
@@ -67,7 +68,7 @@
 .presentation{
   display: flex;
   gap: 8%;
-  @include small-only{
+  @include medium{
     flex-direction: column;
   }
 }
