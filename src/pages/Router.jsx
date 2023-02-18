@@ -8,7 +8,7 @@ import Error from './Error/Error'
 
 function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>    
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/home' element={<Home/>} />

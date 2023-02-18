@@ -10,26 +10,52 @@ import Rating from '../../components/Rating/Rating';
 import Slideshow from '../../components/Slideshow/Slideshow';
 import Tag from '../../components/Tag/Tag';
 
-import housingsData from "../../logements2.json"
+//import housingsData from "../../logements2.json"
 import { homeData } from '../../data/homeData.js';
+import { useContext } from 'react';
+import { dataHousingsContext } from '../../data/context.jsx';
 
 
 const HousingDetails = () => {
-  const housingsData2 = homeData()
-  console.log("housingsdata2",housingsData2)
+  const housingdata2 = useContext(dataHousingsContext);
+  console.log("test context", housingdata2)
+  // const [houses, setHouses] = useState([]);
 
-  const houseId = useParams();
-  console.log( houseId); //obj: {houseId: 'c67ab8a7'}
+  // useEffect(()=>{
+  //   fetch('../../logements.json', {
+  //     headers: {
+  //       'Accept': 'application/json'
+  //     }
+  //   })
+  //     .then(res => res.json())
+  //     .then(res2 => {
+  //       setHouses(res2)
+  //     })
+  //     .catch(error=>{console.error(error)})
+  // },[])
+
+  // console.log("newdata 2", houses)
+
+  const housingsData = homeData()
+  console.log("housingsdata",housingsData[0])
 
   //console.log("housingsData ou homeData dans housingsDetails", housingsData) // tableau de 20items
 
-  if(!housingsData){
+  //const housingsData = houses
+  //console.log("housingdata", housingsData)
+
+
+  // permet d'attendre la donnée
+  if(!housingsData[0]){
     return(
       <div>
         <Header/>
         <p>Loading...</p>
       </div>)
   } else {
+
+    const houseId = useParams();
+    console.log( houseId); //obj: {houseId: 'c67ab8a7'}
 
     // va chercher la valeur "houseId" dans le tableau de donnée, pour nous renvoyer les lignes complétant les données
     const houseDatasFromParamsId = housingsData.filter(element => element.id.includes(Object.values(houseId)));
@@ -44,14 +70,12 @@ const HousingDetails = () => {
 
       const equipmentsInLi=  equipments.map((x,i)=><li key={i}> {x}</li>)
 
-  
       return (
         <div>
           <Header />
           <div id="structure">
             <main>
               <Slideshow urlPath={pictures}></Slideshow>
-
 
               <div className='criteria'>
                 <div className='place'>
@@ -66,8 +90,6 @@ const HousingDetails = () => {
                 </div>
               </div>
 
-
-
               <section className='presentation'>
                 <Collapse title="Description" content={description}/>
                 <Collapse className="tools" title="Équipements" content={equipmentsInLi}/>
@@ -78,7 +100,6 @@ const HousingDetails = () => {
 
         </div>
       );
-
 
     }
   }

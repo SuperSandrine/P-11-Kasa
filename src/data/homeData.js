@@ -6,12 +6,16 @@ export const homeData = () => {
   const [houses, setHouses] = useState([]);
 
   useEffect(()=>{
-    fetch('logements.json')
+    fetch('../../logements.json', {
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
       .then(res => res.json())
       .then(res2 => {
         setHouses(res2)
       })
-      //.catch(error=>{console.error(error)})
+      .catch(error=>{console.error(error)})
   },[])
 
   console.log("newdata", houses)

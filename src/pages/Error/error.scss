@@ -7,6 +7,8 @@
   align-items: center;
   text-align: center;
   color: s.$main-color;
+  justify-content: flex-start;
+  height: calc(100vh - 147px - 204px);
   h1 {
     font-weight: 700;
     font-size: 288px;
@@ -20,12 +22,11 @@
 
   }
   a{
-    padding-top: 20px;
     color: s.$main-color;
     @include typoFive00Eigthee;
     display: flex;
     align-items: flex-end;
-    flex-grow: 0.5;
+    flex-grow: 0.6;
   }
   @include medium{
     //  min-height: 72vh;
@@ -43,7 +44,7 @@
     }
   @include small-only{
     justify-content: space-evenly;
-    height: calc(100vh - 87px - 197px);
+    height: calc(100vh - 84px - 197px);
 
     
     //min-height: 58vh;
@@ -57,6 +58,9 @@
       font-size: 14px;
       //flex-grow: unset;
     }
+  @media(max-width:325px){
+    height: calc(100vh - 63px - 197px);
+  }
 
 }
 }

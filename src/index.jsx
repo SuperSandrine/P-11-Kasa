@@ -7,25 +7,11 @@ import "./styles/index.scss"
 const container = document.getElementById('root')
 const root = createRoot(container);
 
-// const RouterIAm = () => {
-//   return (
-//     <BrowserRouter>
-//     <Routes>
-//       <Route path='/' element={<Home/>} />
-//       <Route path='/about' element={<About />} />
-//       <Route path='/error' element={<Error />} />
-//       <Route path='/housingDetails/:id' element={<HousingDetails />} />
-//       {/* path='/*' renvoie la page Error si jamais l'url ne correspond à rien déclaré ci-dessus 
-//       TODO = Normalement on envoit à la page d'accueil, vérifier ce qui est mieux*/}
-//       <Route path='*' element={<Error />} />
-//     </Routes>
-//     </BrowserRouter>
-//   );
-// };
-
 
 root.render(
-  <Router/>
+  <Router>
+    <dataHousingsContextProvider />
+  </Router>
 );
 
 //export default RouterIAm;
