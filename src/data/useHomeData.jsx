@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-export const homeData = () => {
+export const useHomeData = () => {
 
   const [houses, setHouses] = useState([]);
 
@@ -18,10 +18,7 @@ export const homeData = () => {
       .catch(error=>{console.error(error)})
   },[])
 
-  console.log("newdata", houses)
+  //console.log("newdata", houses) // renvoit un tableau de 20 items
 
   return houses
 };
-
-
-//export const housesMeds = homeData()

@@ -1,7 +1,6 @@
 
 .gallery-box{
   display: flex;
-  //width: 100%;
   height: 415px;
   background-color: pink;
   border-radius: 25px;
@@ -17,8 +16,6 @@
     top: calc(50% - 33px);
     left: 24px;
     border: none;
-    //transform: rotate(90deg);
-    //width: 70px;
     padding: 0;
     background-color: unset;
     @include small-only{
@@ -26,7 +23,6 @@
       left:5px;
     }
     img{    
-      //background-color:blue;
       border-radius: 0;
       @include small-only{
         height: 20px;
@@ -42,7 +38,6 @@
     right: 24px;
     border: none;
     transform: rotate(180deg);
-    //width: 70px;
     padding: 0;
     background-color: unset;
     @include small-only{
@@ -51,7 +46,6 @@
 
     }
     img{    
-      //background-color:blue;
       border-radius: 0;
       @include small-only{
         height: 20px;

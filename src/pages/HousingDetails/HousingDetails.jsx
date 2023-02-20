@@ -1,6 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { redirect } from 'react-router-dom';
+import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import Collapse from '../../components/Collapse/Collapse';
 import Footer from '../../components/Footer/Footer';
@@ -10,67 +8,35 @@ import Rating from '../../components/Rating/Rating';
 import Slideshow from '../../components/Slideshow/Slideshow';
 import Tag from '../../components/Tag/Tag';
 
-//import housingsData from "../../logements2.json"
-import { homeData } from '../../data/homeData.js';
-import { useContext } from 'react';
-import { dataHousingsContext } from '../../data/context.jsx';
+import { useHomeData } from '../../data/useHomeData.jsx';
 
 
 const HousingDetails = () => {
   const houseId = useParams();
-  console.log( houseId); //obj: {houseId: 'c67ab8a7'}
-  // const housingdata2 = useContext(dataHousingsContext);
-  // console.log("test context", housingdata2)
-  
-  // const [houses, setHouses] = useState([]);
+  // console.log( houseId); //obj: {houseId: 'c67ab8a7'}
 
-  // useEffect(()=>{
-  //   fetch('../../logements.json', {
-  //     headers: {
-  //       'Accept': 'application/json'
-  //     }
-  //   })
-  //     .then(res => res.json())
-  //     .then(res2 => {
-  //       setHouses(res2)
-  //     })
-  //     .catch(error=>{console.error(error)})
-  // },[])
-
-  // console.log("newdata 2", houses)
-
-  const housingsData = homeData()
-  console.log("housingsdata",housingsData)
-
-  //console.log("housingsData ou homeData dans housingsDetails", housingsData) // tableau de 20items
-
-  //const housingsData = houses
-  //console.log("housingdata", housingsData)
-
+  const housingsData = useHomeData()
+  // console.log("housingsdata",housingsData) // tableau de 20 items
 
   // permet d'attendre la donnée
-  if(housingsData.length == 0){
+  if(housingsData.length === 0){
     return(
       <div>
         <Header/>
         <p>Loading...</p>
       </div>)
   } else {
-    console.log("jen suis là")
-
-
-    // va chercher la valeur "houseId" dans le tableau de donnée, pour nous renvoyer les lignes complétant les données
+    // va chercher la valeur "houseId" dans le tableau de donnée, pour nous renvoyer un tableau des données correspondant à l'ID
     const houseDatasFromParamsId = housingsData.filter(element => element.id.includes(Object.values(houseId)));
 
-    console.log("houseDatasFromParamsId", houseDatasFromParamsId); // [{...}] // TODO : est dans un index 0, comment le virer et corriger le code suivant 
-
+    // console.log("houseDatasFromParamsId", houseDatasFromParamsId); // [{...}]
 
     if (houseDatasFromParamsId[0] === undefined || houseDatasFromParamsId[0] === null){
       return <Navigate to="/error"></Navigate>;
     } else {
-      const { id, title, cover, pictures, description, host, rating, location, equipments, tags } = houseDatasFromParamsId[0] 
+      const { title, pictures, description, host, rating, location, equipments, tags } = houseDatasFromParamsId[0] // destructure
 
-      const equipmentsInLi=  equipments.map((element,index)=><li key={index}>{element}</li>)
+      const equipmentsInLi=  equipments.map((element,index)=><li key={index}>{element}</li>) // liste le content de équipements
 
       return (
         <div>
@@ -107,7 +73,5 @@ const HousingDetails = () => {
   }
 }
     
-
-
 
 export default HousingDetails;

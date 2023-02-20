@@ -29,7 +29,6 @@
     flex-grow: 0.6;
   }
   @include medium{
-    //  min-height: 72vh;
     justify-content: space-evenly;
     height: calc(100vh - 136px - 204px);
     h1{
@@ -45,9 +44,6 @@
   @include small-only{
     justify-content: space-evenly;
     height: calc(100vh - 84px - 197px);
-
-    
-    //min-height: 58vh;
     h1{
     font-size: 96px;
     }
@@ -56,11 +52,10 @@
     }
     a{
       font-size: 14px;
-      //flex-grow: unset;
     }
+  }
   @media(max-width:325px){
     height: calc(100vh - 63px - 197px);
   }
+}
 
-}
-}

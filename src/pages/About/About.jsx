@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Banner from '../../components/Banner/Banner';
 import Header from '../../components/Header/Header';
 
@@ -13,18 +13,6 @@ const respContent="La bienveillance fait partie des valeurs fondatrices de Kasa.
 const servContent="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.";
 const secuContent="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.";
 
-// const styleSection = {
-//   margin: "43px",
-//   marginInline:"auto",
-//   width:"90%",
-//   '@media (maxWidth: 1023px )': {
-//     width: "100%" ,
-//     backgroundColor: 'blue',
-//   },
-// }
-
-
-
 const About = () => {
   return (
     <div >
@@ -32,7 +20,6 @@ const About = () => {
       <div id="structure">
         <main>
           <Banner fond={mountainBgImg} />
-          {/* <section style={styleSection}> */}
           <section className='collapsesBox'>
             <Collapse title="Fiabilité" content={fiabContent}/>
             <Collapse title="Respect" content={respContent}/>
@@ -46,31 +33,5 @@ const About = () => {
 
   );
 };
-
-// autre méthode avec children:
-// const About = () => {
-//   return (
-//     <div>
-//       <Header />
-//       <Banner fond={mountainBgImg}/>
-//       <h1>À propos</h1>
-//       <Collapse title="Fiabilité">
-//         {fiabContent}
-//       </Collapse>
-//       <Collapse title="Respect" >
-//         {respContent}
-//       </Collapse>
-//       <Collapse title="Service" >
-//         {servContent}
-//       </Collapse>
-//       <Collapse title="Sécurité" >        
-//         {secuContent}
-//       </Collapse>
-//       <Footer />
-//     </div>
-//   );
-// };
-
-
 
 export default About;
