@@ -17,8 +17,11 @@ import { dataHousingsContext } from '../../data/context.jsx';
 
 
 const HousingDetails = () => {
-  const housingdata2 = useContext(dataHousingsContext);
-  console.log("test context", housingdata2)
+  const houseId = useParams();
+  console.log( houseId); //obj: {houseId: 'c67ab8a7'}
+  // const housingdata2 = useContext(dataHousingsContext);
+  // console.log("test context", housingdata2)
+  
   // const [houses, setHouses] = useState([]);
 
   // useEffect(()=>{
@@ -37,7 +40,7 @@ const HousingDetails = () => {
   // console.log("newdata 2", houses)
 
   const housingsData = homeData()
-  console.log("housingsdata",housingsData[0])
+  console.log("housingsdata",housingsData)
 
   //console.log("housingsData ou homeData dans housingsDetails", housingsData) // tableau de 20items
 
@@ -46,21 +49,20 @@ const HousingDetails = () => {
 
 
   // permet d'attendre la donnée
-  if(!housingsData[0]){
+  if(housingsData.length == 0){
     return(
       <div>
         <Header/>
         <p>Loading...</p>
       </div>)
   } else {
+    console.log("jen suis là")
 
-    const houseId = useParams();
-    console.log( houseId); //obj: {houseId: 'c67ab8a7'}
 
     // va chercher la valeur "houseId" dans le tableau de donnée, pour nous renvoyer les lignes complétant les données
     const houseDatasFromParamsId = housingsData.filter(element => element.id.includes(Object.values(houseId)));
 
-    console.log("houseDatasFromParamsId", houseDatasFromParamsId); // [{...}] // TODO : est dans un index 0, comment le virer et corriger le code suivant
+    console.log("houseDatasFromParamsId", houseDatasFromParamsId); // [{...}] // TODO : est dans un index 0, comment le virer et corriger le code suivant 
 
 
     if (houseDatasFromParamsId[0] === undefined || houseDatasFromParamsId[0] === null){
@@ -68,7 +70,7 @@ const HousingDetails = () => {
     } else {
       const { id, title, cover, pictures, description, host, rating, location, equipments, tags } = houseDatasFromParamsId[0] 
 
-      const equipmentsInLi=  equipments.map((x,i)=><li key={i}> {x}</li>)
+      const equipmentsInLi=  equipments.map((element,index)=><li key={index}>{element}</li>)
 
       return (
         <div>
