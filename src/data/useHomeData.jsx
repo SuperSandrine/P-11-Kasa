@@ -6,7 +6,7 @@ export const useHomeData = () => {
   const [houses, setHouses] = useState([]);
 
   useEffect(()=>{
-    fetch('/../../logements.json', {
+    fetch('/../P-11-Kasa/logements.json', {
       headers: {
         'Accept': 'application/json'
       }
