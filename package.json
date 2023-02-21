@@ -2,7 +2,7 @@
   "name": "p-11-kasa",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://supersandrine.github.io/P-11-Kasa",
+  "homepage": "https://supersandrine.github.io/P-11-Kasa/",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.5",
