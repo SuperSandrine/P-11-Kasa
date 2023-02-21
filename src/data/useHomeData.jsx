@@ -6,13 +6,20 @@ export const useHomeData = () => {
   const [houses, setHouses] = useState([]);
 
   useEffect(()=>{
-    fetch('./logements.json', {
+    fetch('/../../logements.json', {
       headers: {
         'Accept': 'application/json'
       }
     })
-      .then(res => res.json())
+      .then((res) =>{ 
+        if(!res.ok){
+          throw new Error(`Ceci est une erreur HTTP, le status est ${res.statut}`)
+        }
+          const response = res.json()
+          return response
+      })
       .then(res2 => {
+        console.log("res2", res2)
         setHouses(res2)
       })
       .catch(error=>{console.error(error)})
