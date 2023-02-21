@@ -13,7 +13,7 @@ export const useHomeData = () => {
     })
       .then((res) =>{ 
         if(!res.ok){
-          throw new Error(`Ceci est une erreur HTTP, le status est ${res.statut}`)
+          throw new Error(`Ceci est une erreur HTTP, le status est ${res.status}`)
         }
           const response = res.json()
           return response
