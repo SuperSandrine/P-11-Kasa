@@ -19,7 +19,7 @@ export const useHomeData = () => {
           return response
       })
       .then(res2 => {
-        console.log("res2", res2)
+        //console.log("res2", res2)
         setHouses(res2)
       })
       .catch(error=>{console.error(error)})
