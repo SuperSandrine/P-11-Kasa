@@ -9,12 +9,8 @@ const root = createRoot(container);
 
 
 root.render(
-  <Router>
-    <dataHousingsContextProvider />
-  </Router>
+  <Router />
 );
-
-//export default RouterIAm;
 
 
 

@@ -13,7 +13,7 @@ const Error = () => {
             <h1 className='headingError'>404</h1>
             <h2>Oups! La page que vous demandez n&apos;existe pas.</h2>
           </div>
-          <NavLink to='/' className='nav-active'>Retourner sur la page d&apos;accueil</NavLink>
+          <NavLink to='/P-11-Kasa/home' className='nav-active'>Retourner sur la page d&apos;accueil</NavLink>
         </section>
       </main>
       <Footer/>

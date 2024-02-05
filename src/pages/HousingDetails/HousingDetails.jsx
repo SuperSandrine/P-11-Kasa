@@ -32,7 +32,7 @@ const HousingDetails = () => {
     // console.log("houseDatasFromParamsId", houseDatasFromParamsId); // [{...}]
 
     if (houseDatasFromParamsId[0] === undefined || houseDatasFromParamsId[0] === null){
-      return <Navigate to="/error"></Navigate>;
+      return <Navigate to="/P-11-Kasa/error"></Navigate>;
     } else {
       const { title, pictures, description, host, rating, location, equipments, tags } = houseDatasFromParamsId[0] // destructure
 

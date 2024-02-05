@@ -10,13 +10,16 @@ function Router() {
   return (
     <BrowserRouter>    
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/home' element={<Home/>} />
-        <Route path='/about' element={<About />} />
-        <Route path='/error' element={<Error />} />
-        <Route path='/housingDetails/:houseId' element={<HousingDetails />} />
-        <Route path='/housingDetails/*' element={<Error />} />
-        <Route path='/*' element={<Error />} />
+        <Route path='/P-11-Kasa/' element={<Home/>} />
+        <Route path='/P-11-Kasa/home' element={<Home/>} />
+        <Route path='/P-11-Kasa/about' element={<About />} />
+        <Route path='/P-11-Kasa/error' element={<Error />} />
+        <Route path='/P-11-Kasa/housingDetails/:houseId' element={<HousingDetails />} />
+        <Route path='/P-11-Kasa/housingDetails/*' element={<Error />} />
+        <Route path='/P-11-Kasa/*' element={<Error />} /> 
+        <Route path='/*' element={<Error />} /> 
+
+        {/* dernière route est celle qui est appelé si aucun chemin précédent ne correspond à l'URL appelée */}
       </Routes>
     </BrowserRouter>
   );

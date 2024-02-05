@@ -16,7 +16,7 @@ const Card = () => {
               style={{
                 backgroundImage: `url(${logement.cover})`
               }} 
-              href={`/housingDetails/${logement.id}`}>
+              href={`/P-11-Kasa/housingDetails/${logement.id}`}>
               <div className="masque-card" >
                 <h2>{logement.title} </h2>
               </div> 
