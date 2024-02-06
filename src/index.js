@@ -1,17 +1,21 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
+import * as ReactDOM  from 'react-dom';
 import Router from './pages/Router.jsx';
 import "./styles/index.scss"
 
 
-const container = document.getElementById('root')
-const root = createRoot(container);
+//const container = document.getElementById('root')
+//const root = createRoot(container);
 
 
-root.render(
-  <Router />
-);
+//root.render(
+//  <Router />
+//);
 
+ReactDOM.render(
+  <Router/>
+)
 
 
 
