@@ -5,7 +5,7 @@ import Router from './pages/Router.jsx';
 import "./styles/index.scss"
 
 
-//const container = document.getElementById('root')
+const container = document.getElementById('root')
 //const root = createRoot(container);
 
 
@@ -14,8 +14,8 @@ import "./styles/index.scss"
 //);
 
 ReactDOM.render(
-  <Router/>
-)
+  <Router/>, container);
+
 
 
 
