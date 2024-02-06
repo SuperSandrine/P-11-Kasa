@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/P-11-Kasa/static/css/main.96010a14.css",
+    "main.js": "/P-11-Kasa/static/js/main.adc3dbdc.js",
+    "static/media/mountainGrand2.jpg": "/P-11-Kasa/static/media/mountainGrand2.26bc5f49a63e3e76cbe3.jpg",
+    "static/media/falaiseGrand2.jpg": "/P-11-Kasa/static/media/falaiseGrand2.facdd914f986476abee6.jpg",
+    "static/media/LOGO.svg": "/P-11-Kasa/static/media/LOGO.a6101328193bb3191cbcb50c120ec0d1.svg",
+    "static/media/LOGO-footer.svg": "/P-11-Kasa/static/media/LOGO-footer.ee689fd9409d1b5a898b4247819d8a00.svg",
+    "index.html": "/P-11-Kasa/index.html",
+    "static/media/leftArrow.svg": "/P-11-Kasa/static/media/leftArrow.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "static/media/greyStar.svg": "/P-11-Kasa/static/media/greyStar.7e4ba6032d7d80ecc30aa389973cef95.svg",
+    "static/media/pinkStar.svg": "/P-11-Kasa/static/media/pinkStar.6430150c126a3adf92c132c52c9c7428.svg",
+    "main.96010a14.css.map": "/P-11-Kasa/static/css/main.96010a14.css.map",
+    "main.adc3dbdc.js.map": "/P-11-Kasa/static/js/main.adc3dbdc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96010a14.css",
+    "static/js/main.adc3dbdc.js"
+  ]
+}
