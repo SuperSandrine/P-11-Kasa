@@ -1,12 +1,12 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import Collapse from '../../components/Collapse/Collapse';
-import Footer from '../../components/Footer/Footer';
-import Header from '../../components/Header/Header';
-import Host from '../../components/Host/Host';
-import Rating from '../../components/Rating/Rating';
-import Slideshow from '../../components/Slideshow/Slideshow';
-import Tag from '../../components/Tag/Tag';
+import Collapse from '../../components/Collapse/Collapse.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Host from '../../components/Host/Host.jsx';
+import Rating from '../../components/Rating/Rating.jsx';
+import Slideshow from '../../components/Slideshow/Slideshow.jsx';
+import Tag from '../../components/Tag/Tag.jsx';
 
 import { useHomeData } from '../../data/useHomeData.jsx';
 
