@@ -10,13 +10,13 @@ function Router() {
   return (
     <HashRouter>    
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/home' element={<Home/>} />
-        <Route path='/about' element={<About />} />
-        <Route path='/error' element={<Error />} />
-        <Route path='/housingDetails/:houseId' element={<HousingDetails />} />
-        <Route path='/housingDetails/*' element={<Error />} />
-        <Route path='/*' element={<Error />} /> 
+        <Route path='/' component={<Home/>} />
+        <Route path='/home' component={<Home/>} />
+        <Route path='/about' component={<About />} />
+        <Route path='/error' component={<Error />} />
+        <Route path='/housingDetails/:houseId' component={<HousingDetails />} />
+        <Route path='/housingDetails/*' component={<Error />} />
+        <Route path='/*' component={<Error />} /> 
 
         {/* dernière route est celle qui est appelé si aucun chemin précédent ne correspond à l'URL appelée */}
       </Routes>
